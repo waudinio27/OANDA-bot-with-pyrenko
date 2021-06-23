@@ -1,5 +1,4 @@
-# OANDA-bot-Ashish-Mark-Matthias
-
+# OANDA-bot
 Hey guys this is the readme for our ongoing project :-) 
 
 It is based on - 
