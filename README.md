@@ -22,3 +22,10 @@ In the near future, I will try to replace the ATR that is right now calculated w
 
 Hope you enjoy!
 
+=======
+Any hints on how to improve the code are welcome!
+
+Needed packages:
+
+pip install numpy
+pip3 install matplotlib
