@@ -1,1 +1,4 @@
 .vscode/settings.json
+code-strategy
+log
+__pycache__

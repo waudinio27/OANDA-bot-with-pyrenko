@@ -33,4 +33,10 @@ pip3 install numpy
 pip3 install matplotlib
 pip3 install TA-Lib
 pip3 install --upgrade ta
+pip3 install pandas_ta
+
+For fetching data from Yahoo finance
+pip3 install yfinance
+
+
 more details on ta-lib: https://blog.quantinsti.com/install-ta-lib-python/#install-ta-lib-on-linux
