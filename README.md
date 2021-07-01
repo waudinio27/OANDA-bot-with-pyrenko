@@ -35,10 +35,23 @@ pip3 install matplotlib
 pip3 install TA-Lib  
 pip3 install --upgrade ta  
 pip3 install pandas_ta  
-pip3 install atoti  
-
+pip3 install duckdb  
 For fetching data from Yahoo finance  
 pip3 install yfinance  
 
+------------------------  
+TODO: Switch to clickhouse from duckdb - https://clickhouse.tech/#quick-start
+sudo apt-get install apt-transport-https ca-certificates dirmngr
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv E0C56BD4
+
+echo "deb https://repo.clickhouse.tech/deb/stable/ main/" | sudo tee \
+    /etc/apt/sources.list.d/clickhouse.list
+sudo apt-get update
+
+sudo apt-get install -y clickhouse-server clickhouse-client
+
+sudo service clickhouse-server start
+clickhouse-client
+------------------------  
 
 more details on ta-lib: https://blog.quantinsti.com/install-ta-lib-python/#install-ta-lib-on-linux

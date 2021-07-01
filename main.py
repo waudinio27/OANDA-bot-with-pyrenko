@@ -1,4 +1,7 @@
 from getYahooTicker import GetYahooTicker
+from dbAccess  import DbAccess
+from duckdb import DuckDb
+
 import logging
 
 def main():
