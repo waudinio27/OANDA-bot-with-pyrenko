@@ -3,7 +3,10 @@ import logging
 
 def main():
     #TODO: move logging config to config file
-    logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s', datefmt='%m/%d/%Y %I:%M:%S %p', filename='log/program.log', level=logging.INFO)
+    logging.basicConfig(format='%(asctime)s %(levelname)s: %(message)s',
+                        datefmt='%m/%d/%Y %I:%M:%S %p',
+                        filename='log/program.log',
+                        level=logging.DEBUG)
     logging.info('Program Started')
     tickerApp = GetYahooTicker("MSFT", "", "")
     tickerApp.run()
