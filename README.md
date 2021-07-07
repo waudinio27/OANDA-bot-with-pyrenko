@@ -9,11 +9,9 @@ https://towardsdatascience.com/renko-brick-size-optimization-34d64400f60e for a 
 
 As you can see, I have added on how to use it with historical data from OANDA and a demo account key to be used with the build_history function. 
 
-Then the prices from the pricing stream are transformed to a list with the .tolist() function. Like this it is possible to be iterated/enumerated with the do_next function inside of a for loop. 
+The optimal brick size is chosen from the second example, were the evaluate_renko function is used for the optimization by using optimal_brick_sfo. 
 
-The idea now is to use this in combination with a while loop. Like this the actual price stream from def get_candles can be used to form the renko prices and append the prices step by step over time. Lets try to build  a chart that updates with every cycle of the loop. 
-
-The optimal brick size is chosen from the second example, were the evaluate_renko function is used for the optimization.
+The candles from the pricing stream are downloaded and added to a pandas data frame inside of a while loop. They form the Renko Bars according to the actual data. It is missing a step to append the data from the pricing stream over time in a correct way to build a chart with all the data since the start with every new cycle. 
 
 Any hints on how to improve the code and add the trading logic and the market orders for buy and sell are welcome!
 
