@@ -6,8 +6,8 @@ import logging
 
 
 class GetYahooTicker(GetTicker):
-    def __init__(self, tickerName, startTime, endTime):
-        super(GetYahooTicker, self).__init__(tickerName, startTime, endTime)
+    def __init__(self, tickerName):
+        super(GetYahooTicker, self).__init__(tickerName)
         logging.debug("start yahoo fetch: " + tickerName)
 
     def run(self):
