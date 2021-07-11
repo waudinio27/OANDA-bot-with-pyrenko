@@ -9,12 +9,12 @@ https://towardsdatascience.com/renko-brick-size-optimization-34d64400f60e for a 
 
 As you can see, I have added on how to use it with historical data from OANDA and a demo account key to be used with the build_history function. 
 
-The optimal brick size is chosen from the second example, were the evaluate_renko function is used for the optimization by using optimal_brick_sfo. 
+The optimal brick size is chosen from the second example, were the evaluate_renko function is used for the optimization by using optimal_brick_sfo. This is why there is no need for additional indicators to confirm the signal. 
 
 The candles from the pricing stream are downloaded with a while Loop and added to a pandas data frame above the while loop. They should form the Renko Bars according to the actual data. I could not confirm if this is working so far. As the candle that gets downloaded in the stream is the last candle from friday night before the market got closed.
 
-After the data is added to the DataFrame there is the implementation of the first part of the trading logic.
-There is a function to create orders and the command to open a Long or Short position. What is missing is that the code is checking for open positions at the account and only opens one position at a time. Also the positions need to be closed when direction is changing - this will be the next thing to put before trials with the demo account. 
+After the data is added to the DataFrame it is possible to see the implementation of the first part of the trading logic.
+There is a function to create orders and the command to open a Long or Short position. What is missing is that the code is checking for open positions at the account and only opens one position at a time. Also the positions need to be closed when direction is changing - this will be the next thing to do before trials with the demo account. 
 
 Any hints on how to improve the code are welcome!
 
