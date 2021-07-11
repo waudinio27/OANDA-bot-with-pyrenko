@@ -11,9 +11,12 @@ As you can see, I have added on how to use it with historical data from OANDA an
 
 The optimal brick size is chosen from the second example, were the evaluate_renko function is used for the optimization by using optimal_brick_sfo. 
 
-The candles from the pricing stream are downloaded and added to a pandas data frame inside of a while loop. They form the Renko Bars according to the actual data. It is missing a step to append the data from the pricing stream over time in a correct way to build a chart with all the data since the start with every new cycle. 
+The candles from the pricing stream are downloaded with a while Loop and added to a pandas data frame above the while loop. They should form the Renko Bars according to the actual data. I could not confirm if this is working so far. As the candle that gets downloaded in the stream is the last candle from friday night before the market got closed.
 
-Any hints on how to improve the code and add the trading logic and the market orders for buy and sell are welcome!
+After the data is added to the DataFrame there is the implementation of the first part of the trading logic.
+There is a function to create orders and the command to open a Long or Short position. What is missing is that the code is checking for open positions at the account and only opens one position at a time. Also the positions need to be closed when direction is changing - this will be the next thing to put before trials with the demo account. 
+
+Any hints on how to improve the code are welcome!
 
 In the near future, I will try to replace the ATR that is right now calculated with Ta-Lib with a hand coded version, for the ease of use and installation. 
 
