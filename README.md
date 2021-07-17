@@ -1,5 +1,5 @@
 # OANDA-bot
-Hey guys this is the readme for an ongoing project :-) 
+Hey guys, this is my implementation of Renko Bars that are plotted with Live Data :-) 
 
 It is based on the brilliant work of Sergey Malchevskiy - 
 
@@ -14,11 +14,12 @@ The optimal brick size is chosen from the second example, were the evaluate_renk
 The candles from the pricing stream are downloaded with a while loop and added to a pandas DataFrame above the while loop. They form the Renko Bars according to the actual Close price. 
 
 After the data is added to the DataFrame I show how a working trading logic can be implemented. 
-There is a function to create orders and the command to open a Long or Short position. 
+There is a function to create orders and the command to open Long or Short positions. 
 
 
 
 Hope you enjoy!
+
 Happy Trading :-)
 
 =======
