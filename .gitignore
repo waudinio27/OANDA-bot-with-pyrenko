@@ -9,3 +9,5 @@ _common_metadata
 *.log
 launch.json
 extensions.json
+*.quotes
+*.trades

@@ -22,7 +22,7 @@ def main():
                         filename=__file__ + '.log',
                         level=logging.DEBUG)
     logging.info('Program Started')
-    tickerApp = GetAlphaVantageTicker("MSFT")
+    tickerApp = GetAlphaVantageTicker("MSFT", True)
     data, metaData = tickerApp.run()
 
     # ## save in a file using pystore
