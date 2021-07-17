@@ -36,9 +36,20 @@ pip3 install TA-Lib
 pip3 install --upgrade ta  
 pip3 install pandas_ta  
 pip3 install duckdb  
+pip3 install termcolor
+
+------------------------
+Data sources
+
 For fetching data from Yahoo finance  
 pip3 install yfinance  
+pip install alpha_vantage
+pip3 install alpaca-trade-api
+------------------------
 
+For crypto:
+
+pip install binance-connector
 ------------------------  
 TODO: Switch to clickhouse from duckdb - https://clickhouse.tech/#quick-start
 sudo apt-get install apt-transport-https ca-certificates dirmngr

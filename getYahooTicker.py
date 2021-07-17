@@ -6,8 +6,8 @@ import logging
 
 
 class GetYahooTicker(GetTicker):
-    def __init__(self, tickerName):
-        super(GetYahooTicker, self).__init__(tickerName)
+    def __init__(self, tickerName, saveToFile):
+        super(GetYahooTicker, self).__init__(tickerName, saveToFile)
         logging.debug("start yahoo fetch: " + tickerName)
 
     def run(self):
@@ -25,3 +25,4 @@ class GetYahooTicker(GetTicker):
             instrument.actions
         except:
             logging.error("Unexpected error:", sys.exc_info()[0])
+        return hist

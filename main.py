@@ -1,7 +1,6 @@
-from getYahooTicker import GetYahooTicker
+import datetime
+from getAlpaca import GetAlpacaTicker
 from dbAccess  import DbAccess
-from duckdb import DuckDb
-
 import logging
 
 def main():
@@ -11,10 +10,14 @@ def main():
                         filename='log/program.log',
                         level=logging.DEBUG)
     logging.info('Program Started')
-    tickerApp = GetYahooTicker("MSFT", "", "")
-    tickerApp.run()
+    currentDate = datetime.datetime.today()
+    prevDate = datetime.datetime.today() - datetime.timedelta(days=1)
 
-    logging.info('Program Finished')
+    tickerApp = GetAlpacaTicker("MSFT", True)
+    bars = tickerApp.run(prevDate.strftime("%Y-%m-%d"),
+                         currentDate.strftime("%Y-%m-%d"))
+
+    logging.info('Program Finished\r\n' + bars)
 
 if __name__ == '__main__':
     main()

@@ -2,3 +2,10 @@
 code-strategy
 log
 __pycache__
+*.parquet
+_metadata
+_common_metadata
+*.db
+*.log
+launch.json
+extensions.json
