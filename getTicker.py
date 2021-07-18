@@ -3,6 +3,7 @@ import numpy as np
 import logging
 
 class GetTicker:
+
     def __init__(self, tickerName, saveToFile):
         self.tickerName = tickerName
         self.saveToFile = saveToFile

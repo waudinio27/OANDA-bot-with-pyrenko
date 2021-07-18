@@ -9,6 +9,17 @@ import pandas as pd
 class GetAlpacaTicker(GetTicker):
     """
     Setup a ticker for read using Alpaca api.
+    Each ticker returned by the Alpaca Api has the following fields:
+    Historical Data
+    ---------------
+        Properties (https://alpaca.markets/docs/api-documentation/api-v2/market-data/alpaca-data-api-v2/historical/)
+        #t : stringRequired :        Timestamp in RFC-3339 format with nanosecond precision.
+        #x : stringRequired :        Exchange where the trade happened.
+        #p : numberRequired :        Trade price.
+        #s : intRequired    :        Trade size.
+        #c : array<string>Required : Trade conditions.
+        #i : intRequired           : Trade ID.
+        #z : stringRequired        : Tape.
     """
     def __init__(self, tickerName, saveToFile):
         super(GetAlpacaTicker, self).__init__(tickerName, saveToFile)
