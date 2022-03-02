@@ -1,24 +1,22 @@
 # OANDA-bot
-Hey guys, this is my implementation of Renko Bars that are plotted with Live Data :-) 
+Hey guys, this is my implementation of Renko Bars that are plotted with Live Data :-)
 
-It is based on the brilliant work of Sergey Malchevskiy - 
+It is based on the brilliant work of Sergey Malchevskiy -
 
 https://github.com/quantroom-pro/pyrenko and it is recommended to read -
 
-https://towardsdatascience.com/renko-brick-size-optimization-34d64400f60e for a good understanding. 
+https://towardsdatascience.com/renko-brick-size-optimization-34d64400f60e for a good understanding.
 
-As you can see, I have added on how to use it with historical data from OANDA and a demo account key to be used with the build_history function. 
+As you can see, I have added how to use it with historical data from OANDA and a demo account key to be used with the build_history function.
 
-The optimal brick size is chosen from the second example, were the evaluate_renko function is used for the optimization by using optimal_brick_sfo. The Renko Bars are built with the best average value from the historic values from the ATR 14 - Average True Range.  
+The optimal brick size is chosen from the second example, where the evaluate_renko function is used for the optimization by using optimal_brick_sfo. The Renko Bars are built with the best average value from the historical values of the ATR 14 - Average True Range.
 
-The candles from the pricing stream are downloaded with a while loop and added to a pandas DataFrame above the while loop. They form the Renko Bars according to the actual Close price. 
+The candles from the pricing stream are downloaded in a while loop and added to a pandas DataFrame above the while loop. They form the Renko Bars according to the current Close price.
 
-After the data is added to the DataFrame I show how a working trading logic can be implemented. 
-There is a function to create orders and the command to open Long or Short positions. 
+After the data is added to the DataFrame I show how a working trading logic can be implemented. There is a function to create orders and the command to open Long or Short positions.
 
+I hope you enjoy it!
 
-
-Hope you enjoy!
 
 Happy Trading :-)
 
